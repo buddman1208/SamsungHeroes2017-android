@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tab_height">40dp</dimen>
+    <dimen name="margin_24dp">24dp</dimen>
+    <dimen name="margin_16dp">16dp</dimen>
+    <dimen name="margin_12dp">12dp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
+    <dimen name="margin_4dp">4dp</dimen>
+    <dimen name="margin_2dp">2dp</dimen>
+    <dimen name="header_divider_width">1dp</dimen>
+    <dimen name="divider_width">0.8dp</dimen>
+    <dimen name="settings_header_height">35dp</dimen>
+    <dimen name="settings_content_height">60dp</dimen>
+    <dimen name="button_left_padding">50dp</dimen>
+    <dimen name="button_top_padding">12dp</dimen>
+    <dimen name="stroke_width">1.5dp</dimen>
+</resources>

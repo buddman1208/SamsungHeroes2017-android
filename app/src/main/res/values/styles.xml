@@ -1,0 +1,39 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="android:actionMenuTextColor">@android:color/white</item>
+    </style>
+
+    <style name="TabTextTheme" parent="@android:style/Widget.TextView">
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/textColorBright</item>
+    </style>
+
+    <style name="TabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="LoginEditTextTheme" parent="@android:style/Widget.EditText">
+        <item name="android:background">@drawable/et_bg_login</item>
+        <item name="android:inputType">textNoSuggestions</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingLeft">@dimen/margin_16dp</item>
+        <item name="android:paddingRight">@dimen/margin_16dp</item>
+        <item name="android:paddingTop">@dimen/margin_12dp</item>
+        <item name="android:paddingBottom">@dimen/margin_12dp</item>
+        <item name="android:textColor">@color/textColorDark</item>
+        <item name="android:textColorHint">@color/grayNormal</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+</resources>
