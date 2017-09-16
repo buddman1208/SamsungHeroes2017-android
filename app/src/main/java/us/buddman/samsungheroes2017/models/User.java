@@ -8,8 +8,9 @@ import java.util.ArrayList;
  */
 
 public class User {
-    public String _id, nickname, email, password, alertSound, authToken, verifyingToken;
-    public int alertType, refreshType, refreshRate;
+    public String apikey;
+    public String id, pw, name, school, grade, classname;
+
 //    public RealmList<CoinSchema> coinArr;
 //    public RealmList<TextSchema> textArr;
 }
