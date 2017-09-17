@@ -1,9 +1,26 @@
 <layout>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/tamago"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/egg_selector" />
+
+        <TextView
+            android:id="@+id/countText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tamago"
+            android:layout_centerHorizontal="true"
+            android:padding="16dp"
+            android:text="asdf"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
 </layout>

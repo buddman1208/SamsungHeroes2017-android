@@ -12,6 +12,13 @@ public class AppController extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        mContext = getApplicationContext();
+    }
+
+    private static Context mContext;
+
+    public static Context getContext() {
+        return mContext;
     }
     @Override
     protected void attachBaseContext(Context base) {

@@ -9,7 +9,9 @@ import java.util.ArrayList;
 
 public class User {
     public String apikey;
-    public String id, pw, name, school, grade, classname;
+    public String userid, password, name, school;
+    public int grade, classNum;
+    public String token;
 
 //    public RealmList<CoinSchema> coinArr;
 //    public RealmList<TextSchema> textArr;

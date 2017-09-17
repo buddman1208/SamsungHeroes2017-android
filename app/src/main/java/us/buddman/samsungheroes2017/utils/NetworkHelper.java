@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class NetworkHelper {
-    private static String url = "http://45.32.44.227:8867/";
+    private static String url = "http://222.112.115.213:5413/";
 
 
     private static Retrofit retrofit = null;

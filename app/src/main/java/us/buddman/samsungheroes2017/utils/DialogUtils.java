@@ -7,6 +7,8 @@ import com.afollestad.materialdialogs.MaterialDialog;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
+
 import us.buddman.samsungheroes2017.R;
 
 
@@ -30,6 +32,15 @@ public class DialogUtils {
     }
 
     public void showListDialog(Context context, String title, MaterialDialog.ListCallback callback, @NotNull String... list) {
+        materialDialog = new MaterialDialog.Builder(context)
+                .titleColor(ContextCompat.getColor(context, R.color.colorPrimary))
+                .contentColor(ContextCompat.getColor(context, R.color.textColorBright))
+                .title(title)
+                .items(list)
+                .itemsCallback(callback)
+                .show();
+    }
+    public void showListDialog(Context context, String title, MaterialDialog.ListCallback callback, @NotNull ArrayList<String> list) {
         materialDialog = new MaterialDialog.Builder(context)
                 .titleColor(ContextCompat.getColor(context, R.color.colorPrimary))
                 .contentColor(ContextCompat.getColor(context, R.color.textColorBright))

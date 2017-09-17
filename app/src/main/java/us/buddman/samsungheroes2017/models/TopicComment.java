@@ -11,6 +11,9 @@ public class TopicComment {
     private Date date;
     private String author, comment;
 
+    public TopicComment() {
+    }
+
     public TopicComment(Date date, String author, String comment) {
         this._id = _id;
         this.date = date;
@@ -28,6 +31,10 @@ public class TopicComment {
 
     public String getDate() {
         return date.toLocaleString();
+    }
+
+    public String getDescription() {
+        return author + ", " + date.toLocaleString();
     }
 
     public void setDate(Date date) {

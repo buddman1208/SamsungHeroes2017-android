@@ -1,15 +1,19 @@
 package us.buddman.samsungheroes2017.utils;
 
+
 import java.util.ArrayList;
+import java.util.Date;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
-import retrofit2.http.Field;
+import retrofit2.http.Query;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
-import retrofit2.http.POST;
+import retrofit2.http.GET;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
+import us.buddman.samsungheroes2017.models.PIFMessage;
+import us.buddman.samsungheroes2017.models.TopicComment;
 import us.buddman.samsungheroes2017.models.User;
 
 /**
@@ -18,26 +22,62 @@ import us.buddman.samsungheroes2017.models.User;
 
 public interface NetworkAPI {
 
-    @POST("/auth/local/register")
-    @FormUrlEncoded
+    @GET("/auth/local/register")
     Call<ResponseBody> registerLocal(
-            @Field("email") String email,
-            @Field("nickname") String nickname,
-            @Field("password") String password);
+            @Query("userid") String userid,
+            @Query("password") String password,
+            @Query("name") String name,
+            @Query("school") String school,
+            @Query("grade") int grade,
+            @Query("classNum") int classNum);
 
-    @POST("/auth/local/authenticate")
-    @FormUrlEncoded
+    @GET("/auth/local/authenticate")
     Call<User> authenticateByToken(
-            @Field("token") String token);
+            @Query("token") String token);
 
-    @POST("/auth/local/login")
-    @FormUrlEncoded
+    @GET("/auth/local/login")
     Call<User> loginByLocal(
-            @Field("email") String email,
-            @Field("password") String password);
+            @Query("userid") String userid,
+            @Query("password") String password);
 
-    @POST("/coin/find/{companyName}")
-    Call<ResponseBody> getCoinListByName(@Path("companyName") String companyName);
+    @GET("/comment/newComment")
+    Call<TopicComment> newComment(
+            @Query("date") Date date,
+            @Query("name") String name,
+            @Query("comment") String comment);
+
+    @GET("/comment/getCommentList")
+    Call<ArrayList<TopicComment>> getCommentList();
+
+    @GET("/pif/getFriendList")
+    Call<ArrayList<User>> getFriendList(
+            @Query("school") String school,
+            @Query("grade") int grade,
+            @Query("classNum") int classNum);
+
+    @GET("/pif/newMessage")
+    Call<PIFMessage> newMessage(
+            @Query("message") String msg,
+            @Query("date") Date date,
+            @Query("target") String targetUserid,
+            @Query("author") String myname);
+
+    @GET("/pif/getMyMessageList")
+    Call<ArrayList<PIFMessage>> getMyMessageList(
+            @Query("userid") String userid);
+
+    @GET("/tamago/up")
+    Call<ResponseBody> tamagoUp(
+            @Query("school") String school,
+            @Query("grade") int grade,
+            @Query("classNum") int classNum);
+
+    @GET("/tamago/getTamagoCount")
+    Call<Integer> getTamagoCount(
+            @Query("school") String school,
+            @Query("grade") int grade,
+            @Query("classNum") int classNum);
+
 
 
 }
