@@ -58,12 +58,12 @@ public class DailyMissionFragment extends Fragment {
 
             }
         });
-        binding.countText.setText(DataManager.getInstance().getActiveUser().second.school + "학교 "+ DataManager.getInstance().getActiveUser().second.grade + "학년 "+ DataManager.getInstance().getActiveUser().second.classNum + "반\n누적횟수 " + currentCount + "회");
+        binding.countText.setText(DataManager.getInstance().getActiveUser().second.school + "학교 " + DataManager.getInstance().getActiveUser().second.grade + "학년 " + DataManager.getInstance().getActiveUser().second.classNum + "반\n누적횟수 " + currentCount + "회");
         binding.tamago.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 currentCount++;
-                binding.countText.setText(DataManager.getInstance().getActiveUser().second.school + "학교 "+ DataManager.getInstance().getActiveUser().second.grade + "학년 "+ DataManager.getInstance().getActiveUser().second.classNum + "반\n누적횟수 " + currentCount + "회");
+                binding.countText.setText(DataManager.getInstance().getActiveUser().second.school + "학교 " + DataManager.getInstance().getActiveUser().second.grade + "학년 " + DataManager.getInstance().getActiveUser().second.classNum + "반\n누적횟수 " + currentCount + "회");
                 NetworkHelper.getInstance().tamagoUp(DataManager.getInstance().getActiveUser().second.school, DataManager.getInstance().getActiveUser().second.grade, DataManager.getInstance().getActiveUser().second.classNum).enqueue(new Callback<ResponseBody>() {
                     @Override
                     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
